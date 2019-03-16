@@ -2,6 +2,7 @@
   "name": "banana",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
