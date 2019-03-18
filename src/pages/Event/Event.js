@@ -22,8 +22,12 @@ class Event extends Component {
         axios
             .put("/api/event", {
                 id: this.props.match.params.id,
-                name: this.state.name,
+                eventName: this.state.eventName,
+                category: this.state.category,
                 description: this.state.description,
+                priority: this.state.priority,
+                lastDate: this.state.lastDate,
+                nextDue: this.state.nextDue,
                 completed: this.state.completed
             })
             .then((response) => {
@@ -57,8 +61,12 @@ class Event extends Component {
             .get("/api/event/" + this.props.match.params.id)
             .then((response) => {
                 this.setState({
-                    name: response.data.name,
+                    eventName: response.data.eventName,
+                    category: response.data.category,
                     description: response.data.description,
+                    priority: response.data.priority,
+                    lastDate: response.data.lastDate,
+                    nextDue: response.data.nextDue,
                     completed: response.data.completed
                 })
             })
@@ -74,21 +82,36 @@ class Event extends Component {
             <div className="row">
                 <div className="col-sm-10 offset-sm-1">
                     <Card title="Edit Event">
-                        <form>
+                    <form>
                             <div className="form-group">
-                                <label htmlFor="eventname">Event Name</label>
-                                <input type="input" name="name" value={this.state.name} onChange={this.onChangeHandler} className="form-control" id="eventname" placeholder="Event Name" />
+                                <label htmlFor="eventName">Event Name</label>
+                                <input type="input" name="eventName" value={this.state.eventName} onChange={this.onChangeHandler} className="form-control" id="eventName" placeholder="Event Name" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleFormControlTextarea1">Task Description</label>
-                                <textarea name="description" value={this.state.description} onChange={this.onChangeHandler} className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                <label htmlFor="eventname">Category</label>
+                                <input type="input" name="category" value={this.state.category} onChange={this.onChangeHandler} className="form-control" id="category" placeholder="Category" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="description">Event Description</label>
+                                <textarea name="description" value={this.state.description} onChange={this.onChangeHandler} className="form-control" id="description" rows="3"></textarea>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="eventname">Priority</label>
+                                <input type="select" name="priority" value={this.state.priority} onChange={this.onChangeHandler} className="form-control" id="priority" placeholder="Priority" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="eventname">Last Date</label>
+                                <input type="date" name="lastDate" value={this.state.lastDate} onChange={this.onChangeHandler} className="form-control" id="lastDate" placeholder="Last Date" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="eventname">Next Due</label>
+                                <input type="date" name="nextDue" value={this.state.nextDue} onChange={this.onChangeHandler} className="form-control" id="nextDue" placeholder="Next Due" />
                             </div>
                             <div className="form-check">
                                 <input name="completed" checked={this.state.completed} onChange={this.onChangeHandler} type="checkbox" className="form-check-input" id="exampleCheck1" />
                                 <label className="form-check-label" htmlFor="exampleCheck1">Event Completed?</label>
-                            </div>
+                            </div>    
                             <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
-                            <button onClick={this.handleDelete} className="btn btn-danger">Delete</button>
                         </form>
                     </Card>
                 </div>

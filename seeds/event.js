@@ -22,7 +22,7 @@ module.exports = {
       events.push(event);
     }
 
-    return queryInterface.bulkInsert('Events', events, {});
+    return queryInterface.bulkInsert('Event', events, {});
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
@@ -35,7 +35,7 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Events', null, {});
+    return queryInterface.bulkDelete('Event', null, {});
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.

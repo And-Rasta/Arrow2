@@ -39,8 +39,12 @@ router
     })
     .post("/event", (req, res) => {
         const newEvent = {
-           name: req.body.name,
+           eventName: req.body.eventName,
+           category: req.body.category,
            description: req.body.description,
+           priority: req.body.priority,
+           lastDate: req.body.lastDate,
+           nextDue: req.body.nextDue,
            completed: false
         }
         db.Event
@@ -59,8 +63,12 @@ router
     })
     .put("/event", (req, res) => {
         const newEvent = {
-            name: req.body.name,
+            eventName: req.body.eventName,
+            category: req.body.category,
             description: req.body.description,
+            priority: req.body.priority,
+            lastDate: req.body.lastDate,
+            nextDue: req.body.nextDue,
             completed: req.body.completed
          }
          db.Event
