@@ -34,7 +34,7 @@ class Home extends Component {
                         </Card>
                     </div>
                     <div className="col-sm-10 col-md-5 text-center">
-                        <Card title="Completed Eventss">
+                        <Card title="Completed Events">
                             <List list={this.state.eventList.filter((elem) => elem.completed)} />
                         </Card>
                     </div>

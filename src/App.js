@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
-import Task from "./pages/Event/Event";
-import NewTask from './pages/NewEvent/NewEvent';
+import Event from "./pages/Event/Event";
+import NewEvent from './pages/NewEvent/NewEvent';
 import Err404 from "./pages/Error404/Error404";
 import Navbar from './components/Navbar/Navbar';
 import "./App.css";

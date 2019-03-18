@@ -14,7 +14,7 @@ function Navbar(props) {
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/newtask">Add New Event</Link>
+                        <Link className="nav-link" to="/newevent">Add New Event</Link>
                     </li>
                 </ul>
             </div>
