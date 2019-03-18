@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
         port: 3306,
         database: 'auvyz874nlafn8eq',
         user: 'root',
-        password: 'turkey@13',
+        password: 'root',
     });
 }
 // Set connection
