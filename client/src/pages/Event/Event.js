@@ -4,7 +4,7 @@ import Card from '../../components/Card/Card';
 
 class Event extends Component {
     state = {
-        name: "",
+        eventName: "",
         description: "",
         completed: ""
     }

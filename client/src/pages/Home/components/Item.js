@@ -34,7 +34,7 @@ class Item extends Component {
             <li>
                 <div className="row">
                     <div className="col-sm-12">
-                        <h4>{this.props.item.name}</h4>
+                        <h4>{this.props.item.eventName}</h4>
                     </div>
                 </div>
 
@@ -46,13 +46,13 @@ class Item extends Component {
                             (this.props.item.completed)
                                 ? <button type="button" onClick={() => this.handleCompletion({
                                     id: this.props.item.id,
-                                    name: this.props.item.name,
+                                    eventName: this.props.item.eventName,
                                     description: this.props.item.description,
                                     completed: false
                                 })} className="btn btn-primary"><FaClipboard /></button>
                                 : <button type="button" onClick={() => this.handleCompletion({
                                     id: this.props.item.id,
-                                    name: this.props.item.name,
+                                    eventName: this.props.item.eventName,
                                     description: this.props.item.description,
                                     completed: true
                                 })} className="btn btn-primary"><FaClipboardCheck /></button>

@@ -4,14 +4,17 @@ import Home from "./pages/Home/Home";
 import Event from "./pages/Event/Event";
 import NewEvent from './pages/NewEvent/NewEvent';
 import Err404 from "./pages/Error404/Error404";
-import Navbar from './components/Navbar/Navbar';
+// import Navbar from './components/Navbar/Navbar';
+// import sideNav from './components/SideNav/sideNav'
+import TopNav from './components/TopNav/TopNav'
 import "./App.css";
+
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="text-center">
-          <Navbar />
+          <TopNav />
           <div className="padMe">
             <Switch>
               <Route exact path="/" component={Home} />
