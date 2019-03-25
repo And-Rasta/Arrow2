@@ -11,7 +11,7 @@ UncontrolledDropdown,
 DropdownToggle,
 DropdownMenu,
 DropdownItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink as RRNavLink } from 'react-router-dom';
 import "./TopNav.css";
 
 //navbar component, loads logo to left and links to right
@@ -39,10 +39,10 @@ class TopNav extends React.Component {
            <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                  <NavItem>
-                 <NavLink href="/">Home</NavLink>
+                 <NavLink tag={RRNavLink} to="/">Home</NavLink>
                  </NavItem>
                  <NavItem>
-                 <NavLink href="/newevent">Add New Event</NavLink>                 
+                 <NavLink tag={RRNavLink} to="/newevent">Add New Event</NavLink>                 
                  </NavItem>  
                     <UncontrolledDropdown nav inNavbar>
                       <DropdownToggle nav caret>
