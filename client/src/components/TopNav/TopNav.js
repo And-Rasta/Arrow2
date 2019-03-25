@@ -11,6 +11,7 @@ UncontrolledDropdown,
 DropdownToggle,
 DropdownMenu,
 DropdownItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import "./TopNav.css";
 
 //navbar component, loads logo to left and links to right

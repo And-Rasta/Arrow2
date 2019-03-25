@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Event from "./pages/Event/Event";
-import NewEvent from './pages/NewEvent/NewEvent';
+import NewEvent from "./pages/NewEvent/NewEvent";
 import Err404 from "./pages/Error404/Error404";
 // import Navbar from './components/Navbar/Navbar';
 // import sideNav from './components/SideNav/sideNav'
