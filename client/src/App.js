@@ -6,8 +6,12 @@ import NewEvent from "./pages/NewEvent/NewEvent";
 import Err404 from "./pages/Error404/Error404";
 // import Navbar from './components/Navbar/Navbar';
 // import sideNav from './components/SideNav/sideNav'
-import TopNav from './components/TopNav/TopNav'
+import TopNav from './components/TopNav/TopNav';
 import "./App.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCompressArrowsAlt, faEdit } from "@fortawesome/pro-regular-svg-icons";
+
+library.add(faCompressArrowsAlt,faEdit);
 
 class App extends Component {
   render() {

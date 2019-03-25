@@ -2,7 +2,7 @@
 
     font-size: 22px;
 
-    font-weight: 300;
+    font-weight: 350;
 
     color: #fed189;
 
@@ -11,5 +11,11 @@
     margin-top: 15px;
 
     text-transform: uppercase;
+
+}
+
+.FontAwesomeIcon, #compress {
+
+    color: #688a7e;
 
 }

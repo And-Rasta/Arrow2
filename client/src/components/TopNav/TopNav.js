@@ -12,6 +12,7 @@ DropdownToggle,
 DropdownMenu,
 DropdownItem } from 'reactstrap';
 import { NavLink as RRNavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./TopNav.css";
 
 //navbar component, loads logo to left and links to right
@@ -34,7 +35,9 @@ class TopNav extends React.Component {
     return (
         <div>
            <Navbar color ="dark" dark expand="lg">
-           <NavbarBrand href="index.html" id="logo"> ⬅️ Arrow <span className="lite">➡️</span></NavbarBrand>
+           <NavbarBrand href="index.html" id="logo"> 
+             <FontAwesomeIcon icon="compress-arrows-alt" id="compress" /> Arrow <span className="lite"> <FontAwesomeIcon icon="compress-arrows-alt" id="compress"/></span>
+           </NavbarBrand>
            <NavbarToggler onClick={this.toggle} />
            <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
