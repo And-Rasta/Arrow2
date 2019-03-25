@@ -33,7 +33,7 @@ class TopNav extends React.Component {
     return (
         <div>
            <Navbar color ="dark" dark expand="lg">
-           <NavbarBrand href="index.html" id="logo"> ⬅️ Arrow <span class="lite">➡️</span></NavbarBrand>
+           <NavbarBrand href="index.html" id="logo"> ⬅️ Arrow <span className="lite">➡️</span></NavbarBrand>
            <NavbarToggler onClick={this.toggle} />
            <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
