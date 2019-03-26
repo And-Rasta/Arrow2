@@ -9,6 +9,7 @@ import Err404 from "./pages/Error404/Error404";
 import TopNav from './components/TopNav/TopNav';
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompressArrowsAlt, faEdit } from "@fortawesome/pro-regular-svg-icons";
 
 library.add(faCompressArrowsAlt,faEdit);
@@ -19,6 +20,7 @@ class App extends Component {
       <Router>
         <div className="text-center">
           <TopNav />
+          <FontAwesomeIcon icon="edit" color="white"/>
           <div className="padMe">
             <Switch>
               <Route exact path="/" component={Home} />
