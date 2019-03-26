@@ -10,7 +10,7 @@ import TopNav from './components/TopNav/TopNav';
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCompressArrowsAlt, faEdit } from "@fortawesome/pro-regular-svg-icons";
+import { faCompressArrowsAlt, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faCompressArrowsAlt,faEdit);
 
