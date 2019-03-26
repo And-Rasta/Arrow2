@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEraser, FaClipboard, FaClipboardCheck, FaEdit } from 'react-icons/fa';
 import axios from 'axios';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Item extends Component {
     handleDelete = (id) => {
@@ -41,7 +42,7 @@ class Item extends Component {
                 <div className="row">
                     <div className="col-sm-12">
                         
-                        <Link className="btn btn-success" to={"/event/" + this.props.item.id}><FaEdit /></Link>
+                        <Link className="btn btn-success" to={"/event/" + this.props.item.id}>  <FontAwesomeIcon icon="edit" color="blue" /></Link>
                         {
                             (this.props.item.completed)
                                 ? <button type="button" onClick={() => this.handleCompletion({
