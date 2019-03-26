@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Card from '../../components/Card/Card';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Event extends Component {
     state = {
@@ -53,9 +52,7 @@ class Event extends Component {
                     <Card title="New Event">
                         <form>
                             <div className="form-group">
-                                <label htmlFor="eventName">Event Name
-                                <FontAwesomeIcon icon="compress-arrows-alt" />
-                                </label>
+                                <label htmlFor="eventName">Event Name</label>
                                 <input type="input" name="eventName" value={this.state.eventName} onChange={this.onChangeHandler} className="form-control" id="eventName" placeholder="Event Name" />
                             </div>
                             <div className="form-group">
